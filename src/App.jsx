@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { AuthProvider, useAuth } from "./context/AuthContext"
+import Landing from "./pages/Landing"
 import Login from "./pages/Login"
 import Home from "./pages/Home"
 import Journal from "./pages/Journal"
@@ -15,8 +16,8 @@ function AppRoutes() {
   const { user } = useAuth()
   return (
     <Routes>
+      <Route path="/" element={!user ? <Landing /> : <Home />} />
       <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
-      <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/journal" element={<ProtectedRoute><Journal /></ProtectedRoute>} />
       <Route path="/mood" element={<ProtectedRoute><MoodTracker /></ProtectedRoute>} />
       <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
