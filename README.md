@@ -1,16 +1,44 @@
-# React + Vite
+# PsychMode 🧠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal mental wellness journal app built with React and Supabase.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Journal** — write, edit, and delete personal journal entries
+- **Mood Tracker** — log your daily mood and view your history with a chart
+- **Profile** — update your display name and change your password
+- **Authentication** — secure email and password login via Supabase
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React + Vite
+- Tailwind CSS
+- Supabase (auth + database)
+- Recharts
+- Deployed on Vercel
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[psychmode.vercel.app](https://psychmode.vercel.app)
+
+## Running Locally
+
+Clone the repo and install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file with your Supabase credentials:
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+Run the dev server:
+
+```bash
+npm run dev
+```
+
+## Author
+
+Zara Amistoso
